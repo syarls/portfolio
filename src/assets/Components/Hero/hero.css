@@ -1,0 +1,188 @@
+@import url('../../../App.css');
+
+@font-face {
+    font-family: 'Nokia';
+    src: url('../../fonts/nokiafc22.ttf') format('truetype');
+  }
+
+.hero-content{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0;
+    margin: 0 auto;
+    max-width: 1300px;
+    padding-top: 50px;
+
+}
+
+.hero-txt{
+    font-family: "Pixel", cursive;
+    font-size: 36px;
+    font-style: normal;
+    max-width: 700px;
+    z-index: 10;
+}
+
+@keyframes slideLeft {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+
+.logo{
+    border-radius: 50%;
+}
+.desc{
+    max-width: 700px;
+
+    
+}
+
+strong{
+    color: white;
+    font-family: 'Nokia', cursive;
+    font-size: 42px;
+    background: linear-gradient(90deg, #4F58FD, #149BF3 50%, #4F58FD);
+    
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: rainbowText 10s linear infinite;
+    background-size: 400%;
+
+}
+.txt{
+    font-family: "Pixel", cursive;
+}
+
+.txt-section{
+       animation: slideLeft 2s ease forwards;
+}
+
+@keyframes rainbowText{
+    0%{
+        background-position: 400%;
+    }
+    100%{
+        background-position: 0%;
+    }
+}
+
+.roles{
+    /* background: linear-gradient(1deg, #4F58FD, #149BF3 99%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; */
+    color: #bc13fe;
+    font-family: 'Nokia', cursive;
+}
+.resume{
+    display:flex;
+    background: linear-gradient(1deg, #4F58FD, #149BF3 99%);
+    border-radius: 30px;
+    color: white;
+    font-size: 16px;
+    margin-top: 20px;
+    height: 50px;
+    font-weight: 600;
+    text-decoration: none;
+    justify-content: center;
+    align-items: center;
+    max-width: 180px;
+}
+
+.typed-cursor {
+    /* background: linear-gradient(1deg, #4F58FD, #149BF3 99%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; */
+    color: #d6b4fc;
+  }
+
+  .hero-img{
+    animation: slideRight 1.5s ease forwards;
+  }
+
+  @keyframes slideRight {
+    from {
+      transform: translateX(-100%);
+    }
+    to {
+      transform: translateX(0);
+    }
+  }
+
+
+/* .hero-img::before{
+    content:'';
+    background: linear-gradient(1deg, #4F58FD, #149BF3 99%);
+    width: 20rem;
+    height: 20rem;
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(100px);
+    z-index: -10;
+    animation: movingCircles linear 10s infinite;
+    display: flex;
+} */
+
+
+
+.hero-img{
+    user-select: none;
+}
+
+/* .desc::before{
+    content:'';
+    background: purple;
+    width: 20rem;
+    height: 20rem;
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(150px);
+    z-index: -20;
+    display: flex;
+    animation: movingCircles2 linear 10s infinite;
+    user-select: none;
+} */
+
+@keyframes movingCircles {
+    0% {
+        transform: translate(0px, 0px); /* Start at (0, 0) */
+      }
+      25% {
+        transform: translate(100px, 0px); /* Move to the right */
+      }
+      50% {
+        transform: translate(100px, 100px); /* Move to the bottom right */
+      }
+      75% {
+        transform: translate(0px, 100px); /* Move to the bottom left */
+      }
+      100% {
+        transform: translate(0px, 0px); /* Return to start position */
+      }
+    
+}
+
+@keyframes movingCircles2 {
+    0% {
+        transform: translate(0px, 0px); /* Start at the top of the circle */
+      }
+      25% {
+        transform: translate(-150px, 0px); /* Move to the left */
+      }
+      50% {
+        transform: translate(0px, -50px); /* Move to the bottom */
+      }
+      75% {
+        transform: translate(150px, 0px); /* Move to the right */
+      }
+      100% {
+        transform: translate(0px, 0px); /* Return to the top */
+      }
+  
+}
+

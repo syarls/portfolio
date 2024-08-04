@@ -1,0 +1,208 @@
+
+@font-face {
+    font-family: 'ArcadeClassic';
+    src: url('../../fonts/Kemco Pixel Bold.ttf') format('truetype');
+}
+
+
+@font-face {
+    font-family: 'Pixel';
+    src: url('../../fonts/Pixl_Demo.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Among Us';
+    src: url('../../fonts/Impostograph-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Arcade';
+    src: url('../../fonts/ka1.ttf') format('truetype');
+}
+
+
+
+.nav-wrapper{
+    background:rgba(0,0,0,0.1);
+    padding: 0.5rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 30;
+    backdrop-filter: blur(50px);
+    height: 100px;
+    animation: slideDown 1.5s ease forwards;
+}
+
+@keyframes slideDown {
+  from {
+    transform: translateY(-100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+
+
+.content{
+    max-width: 1300px;
+    display: flex;
+    align-items:center;
+    justify-content: space-between;
+    padding: 1rem 0;
+    margin: 0 auto;
+}
+
+.content ul{
+    display: flex;
+    align-items: center;
+    gap: 0.35rem;
+    list-style: none;
+
+}
+.content li{
+  margin: 0 1.5rem;
+}
+
+.menu-item{
+    text-decoration: none;
+    font-style: 0.9em;
+    color: #fff;
+    position: relative;
+    cursor:pointer;
+    font-family: 'Pixel', sans-serif;
+    font-size: 14px;
+    display: flex;
+}
+
+    li:nth-child(1) .menu-item{
+    width: 50px;
+    }
+    li:nth-child(2) .menu-item{
+        width: 100px;
+    }
+    li:nth-child(3) .menu-item{
+        width: 90px;
+    }
+    li:nth-child(4) .menu-item{
+        width: 100px;
+    }
+    li:nth-child(5) .menu-item{
+        width: 40px;
+    }
+
+.menu-item:hover{
+    font-family: 'Arcade', sans-serif;
+    font-size: 14px;
+    margin-top: -5px;    
+}
+.menu-item::before{
+    content:"";
+    width: 2rem;
+    height: 0.2rem;
+    background: linear-gradient(1deg, #4F58FD, #149BF3 99%);
+    border-radius: 0.5rem;
+    position: absolute;
+    bottom: -0.6rem;
+    opacity: 0;
+    transform: translateX(-1.5rem);
+    transition: all 0.3s ease;
+}
+
+.menu-item:hover::before{
+    width: 100%;
+    transform: translateX(0);
+    opacity: 1;
+}
+.btn{
+ 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #149BF3;
+    background: #000;
+    outline: 1.5px solid #149BF3;
+    padding: 0.6rem 2rem;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all 0.3 ease;
+    letter-spacing: 2.5px;
+    font-size: 14px;
+    font-family: 'Pixel', 'san-serif';
+    height: 40px;
+    max-width: 120px;
+    
+}
+
+.btn:hover{
+
+
+    color: white;
+    background: linear-gradient(1deg, #4F58FD, #149BF3 99%);
+    padding: 0.6rem 2rem;
+    border:none;
+    outline: 1.5px solid transparent;
+    
+}
+
+.menu-btn{
+    width: 2.5rem;
+    height: 2.5rem;
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border:none;
+    border-radius: 0.4rem;
+    color: #fff;
+    background: linear-gradient(1deg, #4F58FD, #149BF3 99%);
+    line-height: 0;
+    cursor: pointer;
+    transition: all 0.4 ease;
+    display: none;
+    margin-top: -5px;
+}
+
+.menu-btn:hover{
+    color: #149BF3;
+    background: #000;
+    border: 1px solid #149BF3;
+}
+
+
+.logo{
+    user-select: none;
+    cursor: pointer;
+}
+
+@media(max-width: 769px){
+    .menu-btn{
+        display: block;
+    }
+    .content ul{
+        display: none;
+    }
+}
+@media (max-width: 1325px){
+    .nav-wrapper{
+        padding: 0 2rem;
+    }
+}
+
+
+ .logo-txt{
+  
+    font-family: "ArcadeClassic", cursive;
+    font-size: 26px;
+    margin: 2rem 1.25rem;
+    
+} 
+.nav-left{
+    display: flex;
+    margin-top: -7.5px;
+    letter-spacing: 5px;
+}
+
+
+
+
