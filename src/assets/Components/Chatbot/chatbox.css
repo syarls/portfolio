@@ -1,0 +1,165 @@
+
+
+.popup{
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    bottom: 30px;
+    right: 15px;
+    width: 100px;
+    height: 100px;
+    background: #149BF3;
+    border-radius: 50%;
+    color: black;
+    cursor: pointer;
+    
+}
+
+
+.chat{
+    background:white;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    width: 400px;
+    height: 450px;
+    position: fixed;
+    right: 15px;
+    bottom: 135px;
+    border-top: 70px solid #149BF3;
+    display:none;
+}
+
+
+  
+  .chat.visible {
+    display: flex; 
+  align-items: flex-start;
+  justify-content: flex-start; 
+  }
+
+
+  .chat-logo{
+
+    margin-left: 7.5px;
+    border-radius: 10%;
+    margin-top: 5px;
+  }
+  .bot-name{
+    margin-left: 7.5px;
+    color: white;
+    font-size: 20px;
+    text-shadow:
+    -0.5px -1px 0 #000,  
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+    1px 1px 0 #000;
+    
+
+    
+  }
+  .bot-desc{
+    margin-left: -78px;
+    margin-top: 30px;
+   color: #fff;
+   text-shadow:
+   -0.5px -1px 0 #000,  
+   1px -1px 0 #000,
+   -1px 1px 0 #000,
+   1px 1px 0 #000;
+  
+ 
+
+  }
+  .bot-close{
+    color:#fff;
+    font-size: 32px;
+    margin-left: 75px;
+    margin-top: -5px;
+    text-shadow:
+    -0.5px -1px 0 #000,  
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+    1px 1px 0 #000;
+  
+  }
+
+  .chat-header{
+    display: flex;
+    margin-top: -60px;
+  }
+  .chat-history{
+    max-height: 340px;
+    overflow:auto;
+  }
+
+  /* .chat-logo::after{
+
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background: greenyellow;
+   display: flex;
+   border-radius: 50%;
+   justify-content: flex-end;
+   align-items: flex-end;
+   
+  } */
+/* 
+.popup::after {
+    content: '';
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 15px 0 15px 15px;
+    border-color: transparent transparent transparent transparent;
+    position: absolute;
+    bottom: -15px;
+    right: -15px;
+    background: linear-gradient(1deg, #4F58FD, #149BF3 99%);
+    clip-path: polygon(0 0, 100% 50%, 0 100%);
+} */
+
+
+
+.chatbot {
+    display: flex;
+    position: absolute;
+   
+  }
+  
+  .chatbot.visible {
+    display: flex;
+  
+  }
+
+  .chat-input{
+    display: flex;
+    position: absolute;
+    margin-top: 21.32rem;
+
+  }
+  .prompt{
+    width: 360px;
+    height: 40px;
+    outline:none;
+  }
+  .btn-send{
+    font-size: 28px;
+    border:none;
+    background: #149BF3;
+    color:white;
+    height: 40px;
+  }
+
+  .btn-send:hover{
+    background: #0f8cda; /* Slightly darker blue for hover */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow effect */
+  color: #e0f7ff; /* Change text color on hover */
+  }
+
+  .chat-entry{
+    padding-left: 5px;
+  }

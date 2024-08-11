@@ -26,24 +26,23 @@ const navbar = () => {
         </div>
         <ul>
             <li>
-                <a className='menu-item' accessKey='1'>Home</a>
+                <a className='menu-item' accessKey='1'>About</a>
             </li>
             <li>
-                <a className='menu-item' accessKey='2'>Education</a>
+                <a className='menu-item' accessKey='2'>Works</a>
             </li>
             <li>
-                <a className='menu-item' accessKey='3'>Projects</a>
+                <a className='menu-item' accessKey='3'>Experience</a>
             </li>
             <li>
-                
-                <a className='menu-item' accessKey='4'>Experience</a>
+                <a className='menu-item' accessKey='4'>Contacts</a>
             </li>
+            {/* <li>
+
+                <a className='menu-item' accessKey='5'>Feedback</a>
+            </li> */}
             <li>
-                <a className='menu-item' accessKey='5'>Skills</a>
-            </li>
-            
-            <li>
-              <a className='btn' accessKey='6'>Chat</a>
+              <a className='btn' accessKey='6'>Style</a>
             </li>
         </ul>
 

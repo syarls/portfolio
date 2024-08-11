@@ -13,6 +13,7 @@
     margin: 0 auto;
     max-width: 1300px;
     padding-top: 50px;
+    color:rgb(226 232 240);
 
 }
 
@@ -22,6 +23,8 @@
     font-style: normal;
     max-width: 700px;
     z-index: 10;
+    color:rgb(226 232 240);
+    padding-top: 80px;
 }
 
 @keyframes slideLeft {
@@ -34,26 +37,39 @@
   }
 
 
-.logo{
+.hero-logo{
     border-radius: 50%;
+    position: relative;
+    top: -20px;
+    
 }
 .desc{
+    padding-top: 15px;
     max-width: 700px;
+    font-family: "Inter", sans-serif;
+    color:rgb(148,163,184);
+    line-height: 1.5;
+    font-weight: 400;
 
     
 }
 
-strong{
+.hero-name{
     color: white;
     font-family: 'Nokia', cursive;
     font-size: 42px;
     background: linear-gradient(90deg, #4F58FD, #149BF3 50%, #4F58FD);
-    
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     animation: rainbowText 10s linear infinite;
     background-size: 400%;
 
+}
+
+
+.hero-name::selection{
+  background:	#1C1678;
+  -webkit-text-fill-color: #4F58FD;
 }
 .txt{
     font-family: "Pixel", cursive;
@@ -73,11 +89,11 @@ strong{
 }
 
 .roles{
-    /* background: linear-gradient(1deg, #4F58FD, #149BF3 99%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent; */
     color: #bc13fe;
     font-family: 'Nokia', cursive;
+}
+.roles::selection{
+  color: #bc13fe;
 }
 .resume{
     display:flex;
@@ -85,20 +101,19 @@ strong{
     border-radius: 30px;
     color: white;
     font-size: 16px;
-    margin-top: 20px;
+    margin-top: 30px;
     height: 50px;
     font-weight: 600;
     text-decoration: none;
     justify-content: center;
     align-items: center;
     max-width: 180px;
+    user-select: none;
+  
 }
 
 .typed-cursor {
-    /* background: linear-gradient(1deg, #4F58FD, #149BF3 99%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent; */
-    color: #d6b4fc;
+    color: #bc13fe;
   }
 
   .hero-img{
@@ -115,74 +130,59 @@ strong{
   }
 
 
-/* .hero-img::before{
-    content:'';
-    background: linear-gradient(1deg, #4F58FD, #149BF3 99%);
-    width: 20rem;
-    height: 20rem;
-    position: absolute;
-    border-radius: 50%;
-    filter: blur(100px);
-    z-index: -10;
-    animation: movingCircles linear 10s infinite;
-    display: flex;
-} */
+
 
 
 
 .hero-img{
     user-select: none;
 }
-
-/* .desc::before{
-    content:'';
-    background: purple;
-    width: 20rem;
-    height: 20rem;
-    position: absolute;
-    border-radius: 50%;
-    filter: blur(150px);
-    z-index: -20;
-    display: flex;
-    animation: movingCircles2 linear 10s infinite;
-    user-select: none;
-} */
-
-@keyframes movingCircles {
-    0% {
-        transform: translate(0px, 0px); /* Start at (0, 0) */
-      }
-      25% {
-        transform: translate(100px, 0px); /* Move to the right */
-      }
-      50% {
-        transform: translate(100px, 100px); /* Move to the bottom right */
-      }
-      75% {
-        transform: translate(0px, 100px); /* Move to the bottom left */
-      }
-      100% {
-        transform: translate(0px, 0px); /* Return to start position */
-      }
-    
+.bento-container {
+  position: relative;
+  top: 30px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Responsive grid layout */
+  gap: 16px; /* Space between bento boxes */
+  padding: 20px;
+  border-radius: 10px;
 }
 
-@keyframes movingCircles2 {
-    0% {
-        transform: translate(0px, 0px); /* Start at the top of the circle */
-      }
-      25% {
-        transform: translate(-150px, 0px); /* Move to the left */
-      }
-      50% {
-        transform: translate(0px, -50px); /* Move to the bottom */
-      }
-      75% {
-        transform: translate(150px, 0px); /* Move to the right */
-      }
-      100% {
-        transform: translate(0px, 0px); /* Return to the top */
-      }
+.bento-box {
+ 
+  border-radius: 8px; /* Rounded corners */
+  text-align: left; /* Center the text */
+  color: white; /* White text for contrast */
+}
+
+
+.stat-number {
+  font-size: 36px;
+  font-weight: bold;
+  margin-bottom: 8px;
+  color:white;
+  width: auto;
+  background: linear-gradient(90deg, #4F58FD, #149BF3 50%, #4F58FD);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: rainbowText 10s linear infinite;
+  background-size: 400%;
+  max-width: 150px;
+  text-align: center;
   
+
+
+
+  font-family: 'Nokia', cursive;
+}
+
+.stat-number::selection{
+-webkit-text-fill-color: #4F58FD;
+}
+
+.stat-description {
+  font-size: 16px;
+  color: #ccc; /* Light gray text for the description */
+ font-weight: 600;
+ font-family: "Inter", sans-serif;
 }
 

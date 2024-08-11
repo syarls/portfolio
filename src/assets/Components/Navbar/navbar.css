@@ -22,6 +22,7 @@
 
 
 
+
 .nav-wrapper{
     background:rgba(0,0,0,0.1);
     padding: 0.5rem 0;
@@ -31,6 +32,7 @@
     backdrop-filter: blur(50px);
     height: 100px;
     animation: slideDown 1.5s ease forwards;
+    user-select: none;
 }
 
 @keyframes slideDown {
@@ -67,7 +69,8 @@
 .menu-item{
     text-decoration: none;
     font-style: 0.9em;
-    color: #fff;
+    color: rgb(226 232 240);;
+    font-weight: 400;
     position: relative;
     cursor:pointer;
     font-family: 'Pixel', sans-serif;
@@ -75,21 +78,21 @@
     display: flex;
 }
 
-    li:nth-child(1) .menu-item{
+     li:nth-child(1) .menu-item{
     width: 50px;
     }
     li:nth-child(2) .menu-item{
-        width: 100px;
+        width: 60px;
     }
-    li:nth-child(3) .menu-item{
-        width: 90px;
+     li:nth-child(3) .menu-item{
+        width: 100px;
     }
     li:nth-child(4) .menu-item{
-        width: 100px;
+        width: 80px;
     }
-    li:nth-child(5) .menu-item{
+    /* li:nth-child(5) .menu-item{
         width: 40px;
-    }
+    } */  */
 
 .menu-item:hover{
     font-family: 'Arcade', sans-serif;
@@ -160,7 +163,7 @@
     cursor: pointer;
     transition: all 0.4 ease;
     display: none;
-    margin-top: -5px;
+   
 }
 
 .menu-btn:hover{
@@ -173,6 +176,42 @@
 .logo{
     user-select: none;
     cursor: pointer;
+}
+
+.logo-txt{
+  
+    font-family: "ArcadeClassic", cursive;
+    font-size: 26px;
+    margin: 2rem 1.25rem;
+    
+    
+} 
+.nav-left{
+    display: flex;
+    margin-top: -7.5px;
+    letter-spacing: 5px;
+}
+
+
+@media (max-width: 425px){
+  
+    .logo-txt{
+        
+            font-size: 18px;
+    }
+    .logo{
+        height: 50px;
+        width: 50px;
+        margin-top: 0.45rem;
+        
+    }
+/* 
+    .menu-btn{
+        position: absolute;
+        right: 1rem;
+    } */
+  
+
 }
 
 @media(max-width: 769px){
@@ -190,18 +229,6 @@
 }
 
 
- .logo-txt{
-  
-    font-family: "ArcadeClassic", cursive;
-    font-size: 26px;
-    margin: 2rem 1.25rem;
-    
-} 
-.nav-left{
-    display: flex;
-    margin-top: -7.5px;
-    letter-spacing: 5px;
-}
 
 
 
