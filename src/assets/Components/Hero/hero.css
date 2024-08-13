@@ -50,6 +50,7 @@
     color:rgb(148,163,184);
     line-height: 1.5;
     font-weight: 400;
+    font-size: 19px;
 
     
 }
@@ -73,6 +74,8 @@
 }
 .txt{
     font-family: "Pixel", cursive;
+    font-size: 32px;
+    
 }
 
 .txt-section{

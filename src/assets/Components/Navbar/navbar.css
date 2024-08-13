@@ -21,51 +21,6 @@
 }
 
 
-
-
-.nav-wrapper{
-    background:rgba(0,0,0,0.1);
-    padding: 0.5rem 0;
-    position: sticky;
-    top: 0;
-    z-index: 30;
-    backdrop-filter: blur(50px);
-    height: 100px;
-    animation: slideDown 1.5s ease forwards;
-    user-select: none;
-}
-
-@keyframes slideDown {
-  from {
-    transform: translateY(-100%);
-  }
-  to {
-    transform: translateY(0);
-  }
-}
-
-
-
-.content{
-    max-width: 1300px;
-    display: flex;
-    align-items:center;
-    justify-content: space-between;
-    padding: 1rem 0;
-    margin: 0 auto;
-}
-
-.content ul{
-    display: flex;
-    align-items: center;
-    gap: 0.35rem;
-    list-style: none;
-
-}
-.content li{
-  margin: 0 1.5rem;
-}
-
 .menu-item{
     text-decoration: none;
     font-style: 0.9em;
@@ -78,26 +33,8 @@
     display: flex;
 }
 
-     li:nth-child(1) .menu-item{
-    width: 50px;
-    }
-    li:nth-child(2) .menu-item{
-        width: 60px;
-    }
-     li:nth-child(3) .menu-item{
-        width: 100px;
-    }
-    li:nth-child(4) .menu-item{
-        width: 80px;
-    }
-    /* li:nth-child(5) .menu-item{
-        width: 40px;
-    } */  */
-
 .menu-item:hover{
     font-family: 'Arcade', sans-serif;
-    font-size: 14px;
-    margin-top: -5px;    
 }
 .menu-item::before{
     content:"";
@@ -119,22 +56,7 @@
 }
 .btn{
  
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #149BF3;
-    background: #000;
-    outline: 1.5px solid #149BF3;
-    padding: 0.6rem 2rem;
-    border-radius: 30px;
-    cursor: pointer;
-    transition: all 0.3 ease;
-    letter-spacing: 2.5px;
-    font-size: 14px;
     font-family: 'Pixel', 'san-serif';
-    height: 40px;
-    max-width: 120px;
-    
 }
 
 .btn:hover{
@@ -173,31 +95,18 @@
 }
 
 
-.logo{
-    user-select: none;
-    cursor: pointer;
-}
+
 
 .logo-txt{
-  
     font-family: "ArcadeClassic", cursive;
-    font-size: 26px;
-    margin: 2rem 1.25rem;
-    
-    
 } 
-.nav-left{
-    display: flex;
-    margin-top: -7.5px;
-    letter-spacing: 5px;
-}
+
 
 
 @media (max-width: 425px){
   
     .logo-txt{
-        
-            font-size: 18px;
+        font-size: 18px;
     }
     .logo{
         height: 50px;
@@ -205,12 +114,6 @@
         margin-top: 0.45rem;
         
     }
-/* 
-    .menu-btn{
-        position: absolute;
-        right: 1rem;
-    } */
-  
 
 }
 
@@ -227,6 +130,12 @@
         padding: 0 2rem;
     }
 }
+
+
+
+
+
+
 
 
 

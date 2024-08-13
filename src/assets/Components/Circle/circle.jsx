@@ -18,7 +18,7 @@ const circle = () => {
 
   return (
     <div
-      className="circle"
+      className="xs:w-[10rem] xs:h-[10rem] circle"
       style={{
         left: `${position.x}px`,
         top: `${position.y}px`,

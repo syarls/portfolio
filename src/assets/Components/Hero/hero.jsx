@@ -42,23 +42,26 @@ const hero = () => {
 
   return (
     <div>
-    <div className='hero-content'>
+    <div className='xs:flex xs:flex-col md:flex md:flex-col hero-content'>
 
 
         <div className="hero-img">
             
-       <img src='./src/assets/images/logo5.jpg' alt="" className="hero-logo" width="425px" height="425px" />
+       <img src='./src/assets/images/logo5.jpg' alt="" className="hero-logo xs:w-[250px] xs:-h[250px] xs:flex xs:flex-col" width="425px" height="425px" />
        </div>
        <div className="txt-section">
-       <h1 className='hero-txt'>Hi, I am <strong className='hero-name'>Charles Dave Reyes</strong></h1>
-       <h1 className='txt'>I am a <span className="roles" ref={el}></span></h1>
-       <h3 className='desc'>
+       <h1 className="xs:text-[24px] xs:pt-[0px] xs:text-center hero-txt">
+    <span className="xs:hidden hero-txt">Hi, I am </span>
+    <strong className="xs:text-[28px] hero-name">Charles Dave Reyes</strong>
+  </h1>
+       <h1 className='txt xs:text-center'><span className='txt xs:hidden'>I am a </span><span className="roles xs:text-[24px]" ref={el}></span></h1>
+       <h3 className='desc xs:pl-[15px] xs:pr-[15px]'>
       I am a versatile professional based in the Philippines with extensive experience in software engineering and beyond. From designing to solving complex problems, I am adept at delivering impactful solutions within the industry.
        </h3>
      
-         
-       <a href="./src/assets/images/Reyes_Resume.pdf" download="Reyes_Resume" className='resume'>  <FaDownload /> &nbsp; Download CV</a>
-      
+        
+       <a href="./src/assets/images/Reyes_Resume.pdf" download="Reyes_Resume" className='xs:mx-auto w-50% resume'>  <FaDownload /> &nbsp; Download CV</a>
+    
        <div className="bento-container">
   <div className="bento-box dark-black">
     <div className="stat-number">1</div>
