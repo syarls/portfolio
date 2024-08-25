@@ -35,6 +35,7 @@
 
 .menu-item:hover{
     font-family: 'Arcade', sans-serif;
+    
 }
 .menu-item::before{
     content:"";
@@ -53,6 +54,7 @@
     width: 100%;
     transform: translateX(0);
     opacity: 1;
+    
 }
 .btn{
  
@@ -114,7 +116,12 @@
         margin-top: 0.45rem;
         
     }
+    .menu-item:hover::before{
+        width: 30%;
+        opacity: 1;
+    }  
 
+    
 }
 
 @media(max-width: 769px){
@@ -124,6 +131,10 @@
     .content ul{
         display: none;
     }
+
+
+ 
+
 }
 @media (max-width: 1325px){
     .nav-wrapper{

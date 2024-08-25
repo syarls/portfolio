@@ -1,4 +1,6 @@
 
+//Action (i.e. Redirection and Show Image)
+
 const responses = [
     { question: 'Tell me about yourself', answer: 'Charles Dave Reyes is a graduate from the University of Santo Tomas with the degree in Bachelor of Science in Information Technology. He describes himself as an ambitious and passionate person who is eager to learn and grow in the field of Information Technology. He is also a perfectionist, who loves to hone his crafts and pay attention to small details.' },
     { question: 'Can you tell me about yourself', answer: 'Charles Dave Reyes is a graduate from the University of Santo Tomas with the degree in Bachelor of Science in Information Technology. He describes himself as an ambitious and passionate person who is eager to learn and grow in the field of Information Technology. He is also a perfectionist, who loves to hone his crafts and pay attention to small details.' },
@@ -14,20 +16,24 @@ const responses = [
     { question: 'Tell me a little bit about yourself.', answer: 'Charles Dave Reyes is a graduate from the University of Santo Tomas with the degree in Bachelor of Science in Information Technology. He describes himself as an ambitious and passionate person who is eager to learn and grow in the field of Information Technology. He is also a perfectionist, who loves to hone his crafts and pay attention to small details.' },
     { question: 'Can you share some details about yourself?', answer: 'Charles Dave Reyes is a graduate from the University of Santo Tomas with the degree in Bachelor of Science in Information Technology. He describes himself as an ambitious and passionate person who is eager to learn and grow in the field of Information Technology. He is also a perfectionist, who loves to hone his crafts and pay attention to small details.' },
     { question: 'Can you tell more about Charles Dave Reyes?', answer: 'Charles Dave Reyes is a graduate from the University of Santo Tomas with the degree in Bachelor of Science in Information Technology. He describes himself as an ambitious and passionate person who is eager to learn and grow in the field of Information Technology. He is also a perfectionist, who loves to hone his crafts and pay attention to small details.' },
-    
-    
+    { question: 'Charles Dave Reyes?', answer: 'Charles Dave Reyes is a graduate from the University of Santo Tomas with the degree in Bachelor of Science in Information Technology. He describes himself as an ambitious and passionate person who is eager to learn and grow in the field of Information Technology. He is also a perfectionist, who loves to hone his crafts and pay attention to small details.' },
+    { question: 'Charles?', answer: 'Charles Dave Reyes is a graduate from the University of Santo Tomas with the degree in Bachelor of Science in Information Technology. He describes himself as an ambitious and passionate person who is eager to learn and grow in the field of Information Technology. He is also a perfectionist, who loves to hone his crafts and pay attention to small details.' },
+    { question: 'Dave?', answer: 'Charles Dave Reyes is a graduate from the University of Santo Tomas with the degree in Bachelor of Science in Information Technology. He describes himself as an ambitious and passionate person who is eager to learn and grow in the field of Information Technology. He is also a perfectionist, who loves to hone his crafts and pay attention to small details.' },
+    { question: 'Reyes?', answer: 'Charles Dave Reyes is a graduate from the University of Santo Tomas with the degree in Bachelor of Science in Information Technology. He describes himself as an ambitious and passionate person who is eager to learn and grow in the field of Information Technology. He is also a perfectionist, who loves to hone his crafts and pay attention to small details.' },
 
     { question: 'How old is he?', answer: 'As of 2024, he is currently 22 years old.' },
     { question: 'How old is Charles Dave Reyes?', answer: 'As of 2024, he is currently 22 years old.' },
     { question: 'How old is Charles?', answer: 'As of 2024, he is currently 22 years old.' },
     { question: 'How old are you?', answer: 'As of 2024, he is currently 22 years old.' },
+    { question: 'age?', answer: 'As of 2024, he is currently 22 years old.' },
+    { question: 'Tell me about your parents?', answer: 'I am currently living with my parents, comprised of six family members. I am the eldest son out of the four siblings.' },
     { question: 'When is his birthday?', answer: 'May 18, 2002' },
+    { question: 'Birthday?', answer: 'May 18, 2002' },
     { question: 'Where does he live?', answer: 'He is currently residing in San Mateo Rizal, Philippines.' },
     { question: 'Where did you graduate?', answer: 'Charles Dave Reyes graduated from the University of Santo Tomas in Manila, Philippines.' },
     { question: 'Where did you graduate college?', answer: 'Charles Dave Reyes graduated from the University of Santo Tomas in Manila, Philippines.' },
     { question: 'When did you graduate?', answer: 'Charles Dave Reyes graduated from the University of Santo Tomas on the year of 2024.' },
     { question: 'What year did you graduate?', answer: 'Charles Dave Reyes graduated from the University of Santo Tomas on the year of 2024.' },
-
 
 
     { question: 'What role are you most comfortable at?', answer: 'Charles is comfortable working with any role, but out of all them, he is the most efficient with software engineering'},
@@ -46,11 +52,15 @@ const responses = [
     { question: 'Where do you currently reside?', answer: 'I am based in San Mateo Rizal, Philippines' },
     { question: 'Where do you reside?', answer: 'I am based in San Mateo Rizal, Philippines' },
     { question: 'Where are you located?', answer: 'I am based in San Mateo Rizal, Philippines' },
+    { question: 'Location?', answer: 'I am based in San Mateo Rizal, Philippines' },
     { question: 'Do you watch anime?', answer: 'Yes, some of his favorites are Naruto, One Piece, and Jujutsu Kaisen' },
     { question: 'Do you like travelling?', answer: 'Yes, he loves to travel to different places and explore new cultures and perspectives' },
-    { question: 'Who am I talking to?', answer: 'BotFolio is a chatbot created to help the audience learn more about the author of the website.' },
+    { question: 'Who am I talking to?', answer: 'Pandora is a chatbot created to help the audience learn more about the author of the website.' },
     { question: 'Where did he study in college?', answer: 'Charles graduated from the University of Santo Tomas with the degree of Bachelor of Science in Information Technology' },
     { question: 'Where did you study in college?', answer: 'Charles graduated from the University of Santo Tomas with the degree of Bachelor of Science in Information Technology' },
+    { question: 'College?', answer: 'Charles graduated from the University of Santo Tomas with the degree of Bachelor of Science in Information Technology' },
+    { question: 'School?', answer: 'Charles graduated from the University of Santo Tomas with the degree of Bachelor of Science in Information Technology' },
+    
     { question: 'What are your plans in the future?', answer: 'In the future, Charles plans to improve and learn more about the concepts of technology and how he could make an impact in the industry. He also plans on taking certification exams to boost his overall ability and reliability.' },
     
     { question: 'Are you a software engineer?', answer: 'Yes, Charles Dave Reyes is a software engineer' },
@@ -71,37 +81,70 @@ const responses = [
     { question: 'Tell me about his weaknesses?', answer: 'As a perfectionist, he is very overcritical about himself and always tries to improve in any way possible. However, it can also be a double-edged sword as he sometimes struggle with time management and also with himself. ' },
     
     { question: 'Who is Charles Dave Reyes?', answer: 'Charles Dave Reyes is a software engineer with years of experience in developing websites' },
-    { question: 'Who am I talking to?', answer: 'BotFolio is a chatbot created to help the audience learn more about the author of the website.' },
-    { question: 'What are you?', answer: 'BotFolio is a chatbot created to help the audience learn more about the author of the website.' },
+    { question: 'Who am I talking to?', answer: 'Pandora is a chatbot created to help the audience learn more about the author of the website.' },
+    { question: 'What are you?', answer: 'Pandora is a chatbot created to help the audience learn more about the author of the website.' },
     { question: 'Why did you create this website?', answer: 'Charles Dave Reyes developed this website as a platform to introduce himself to his audience, showcase his expertise, and connect with industry professionals.' },
     { question: 'Why did you develop this website?', answer: 'Charles Dave Reyes developed this website as a platform to introduce himself to his audience, showcase his expertise, and connect with industry professionals.' },
     { question: 'Why did you make this website?', answer: 'Charles Dave Reyes developed this website as a platform to introduce himself to his audience, showcase his expertise, and connect with industry professionals.' },
     
 
-    { question: 'What is your mobile number?', answer: 'Feel free to contact me via phone at 09491163935.' },
-    { question: 'Provide me your mobile number?', answer: 'Sure, feel free to contact me via phone at 09491163935.' },
-    { question: 'Can you give me your phone number?', answer: 'Sure, feel free to contact me via phone at 09491163935.' },
-    { question: 'Provide me your mobile number?', answer: 'Sure, feel free to contact me via phone at 09491163935.' },
-    { question: 'Could you share your mobile number?', answer: 'Sure, feel free to contact me via phone at 09491163935.' },
-    { question: 'May I have your phone number?', answer: 'Sure, feel free to contact me via phone at 09491163935.' },
+    { question: 'How can I contact you', answer: 'Feel free to contact the author via phone at 09491163935.' },
+    { question: 'What is your mobile number?', answer: 'Feel free to contact the author via phone at 09491163935.' },
+    { question: 'Provide me your mobile number?', answer: 'Sure, feel free to contact the author via phone at 09491163935.' },
+    { question: 'Can you give me your phone number?', answer: 'Sure, feel free to contact the author via phone at 09491163935.' },
+    { question: 'Provide me your mobile number?', answer: 'Sure, feel free to contact the author phone at 09491163935.' },
+    { question: 'Could you share your mobile number?', answer: 'Sure, feel free to contact the author via phone at 09491163935.' },
+    { question: 'May I have your phone number?', answer: 'Sure, feel free to contact him the author via phone at 09491163935.' },
 
-
+    { question: 'panda', answer: 'Pandora is a chatbot created to help the audience learn more about the author of the website.' },
     { question: 'hatdog?', answer: 'hatdog ka rin' },
     { question: 'shawarma', answer: 'shawarma who?' },
     { question: 'shawarma rice', answer: 'shawarma who?' },
     { question: 'test', answer: 'I know who you are 😉' },
     { question: 'testtest', answer: 'I know who you are 😉' },
     { question: 'ganda ni iu', answer: 'I know who you are 😉' },
+    { question: 'How would you rate yourself in Javascript (1-10)?', answer: 'With his knowledge in various programming languages such as React, Angular and Vue, the author rated himself with a solid 9/10 in Javascript.' },
+    { question: 'From 1 to 10, how would you rate yourself in Javascript', answer: 'With his knowledge in various programming languages such as React, Angular and Vue, the author rated himself with a solid 9/10 in Javascript.' },
+    { question: 'Rate your javascript skills from 1 - 10?', answer: 'With his knowledge in various programming languages such as React, Angular and Vue, the author rated himself with a solid 9/10 in Javascript.' },
+    { question: 'Rate your javascript from 1 - 10?', answer: 'With his knowledge in various programming languages such as React, Angular and Vue, the author rated himself with a solid 9/10 in Javascript.' },
+    { question: 'Rate yourself from 1-10 in Javascript', answer: 'With his knowledge in various programming languages such as React, Angular and Vue, the author rated himself with a solid 9/10 in Javascript.' },
+    { question: 'How would you rank your JavaScript skills on a scale of 1 to 10?', answer: 'With his knowledge in various programming languages such as React, Angular and Vue, the author rated himself with a solid 9/10 in Javascript.' },
+    { question: 'How confident are you in your JavaScript on a scale of 1 to 10?', answer: 'With his knowledge in various programming languages such as React, Angular and Vue, the author rated himself with a solid 9/10 in Javascript.' },
+    { question: 'On a scale of 1-10, how would you rate yourself in Javascript?', answer: 'With his knowledge in various programming languages such as React, Angular and Vue, the author rated himself with a solid 9/10 in Javascript.' },
+    { question: 'If you had to rate your JavaScript from 1 to 10, what would you give yourself?', answer: 'With his knowledge in various programming languages such as React, Angular and Vue, the author rated himself with a solid 9/10 in Javascript.' },
+    { question: 'How would you rank your JavaScript skills on a scale of 1 to 10', answer: 'With his knowledge in various programming languages such as React, Angular and Vue, the author rated himself with a solid 9/10 in Javascript.' },
+    { question: 'How would you evaluate yourself in JavaScript, from 1 to 10??', answer: 'With his knowledge in various programming languages such as React, Angular and Vue, the author rated himself with a solid 9/10 in Javascript.' },
+    { question: 'How confident are you in JavaScript on a scale of 1 to 10?', answer: 'With his knowledge in various programming languages such as React, Angular and Vue, the author rated himself with a solid 9/10 in Javascript.' },
+
+
+    { question: 'Are you the strongest because you are Charles Dave Reyes or are you the Charles Dave Reyes because your the strongest?', answer: 'The world will never know!' },
+    { question: 'Are you Charles Dave Reyes because you are the strongest or are you the strongest because your Charles Dave Reyes?', answer: 'The world will never know!' },
     { question: 'What should I do?', answer: 'Please feel free to ask me any questions about the author.' },
     { question: 'What is this website?', answer: 'This website is designed to learn more about the author named Charles Dave Reyes.' },
     { question: 'What is the goal of the website?', answer: 'This website is designed to learn more about the author named Charles Dave Reyes.' },
-    { question: 'Botfolio', answer: 'BotFolio is a chatbot created to help the audience learn more about the author of the website.' },
+    { question: 'Pandora', answer: 'Pandora is a chatbot created to help the audience learn more about the author of the website.' },
     { question: 'Can I hire you?', answer: 'Sure, please feel free to contact me at your earliest convenience!' },
-    { question: 'What is Botfolio?', answer: 'BotFolio is a chatbot created to help the audience learn more about the author of the website.' },
+    { question: 'What is Pandora?', answer: 'Pandora is a chatbot created to help the audience learn more about the author of the website.' },
+    { question: 'Who is Pandora?', answer: 'Pandora is a chatbot created to help the audience learn more about the author of the website.' },
     { question: 'Did he create this website', answer: 'Charles Dave Reyes is the creator of this website.' },
     { question: 'Who created this website?', answer: 'Charles Dave Reyes is the creator of this website.' },
-    { question: 'Hello World!', answer: 'Hello Universe!' },
+    { question: 'Hello World!', answer: 'Hi, how can I help you?' },
+    { question: 'Hello Pandora!', answer: 'Hi, how can I help you?' },
+    { question: 'Hi Pandora!', answer: 'Hi, how can I help you?' },
+    { question: 'Hello Charles!', answer: 'Hi, how can I help you?' },
+    { question: 'Hi Charles!', answer: 'Hi, how can I help you?' },
+    { question: 'Hi Dave!', answer: 'Hi, how can I help you?' },
+    { question: 'Hello Dave!', answer: 'Hi, how can I help you?' },
+    { question: 'Hi Reyes!', answer: 'Hi, how can I help you?' },
+    { question: 'Hello Reyes!', answer: 'Hi, how can I help you?' },
+    { question: 'Hi Charles Dave Reyes!', answer: 'Hi, how can I help you?' },
+    { question: 'Hello Charles Dave Reyes!', answer: 'Hi, how can I help you?' },
+    { question: 'Hi Charles Dave!', answer: 'Hi, how can I help you?' },
+    { question: 'Hello Charles Dave!', answer: 'Hi, how can I help you?' },
+    
+
     { question: 'Hello', answer: 'Hi, how can I help you?' },
+    { question: 'Hellaur', answer: 'Hi, how can I help you?' },
     { question: 'Hi', answer: 'Hi, how can I help you?' },
     { question: 'Hey!', answer: 'Hi, how can I help you?' },
     { question: 'Hey there!', answer: 'Hi, how can I help you?' },
@@ -110,10 +153,14 @@ const responses = [
     { question: 'Good evening!', answer: 'Hi, how can I help you?' },
     
 
-    { question: 'Are you single?', answer: 'I am currently single with no one to mingle.' },
+    { question: 'Are you single?', answer: 'Charles is currently single with no one to mingle.' },
+
 
     { question: 'Do you have any experience in React?', answer: 'Yes, Charles is knowledgeable and versatile with the React Framework.' },
     { question: 'What programming languages are you familiar with?', answer: 'Charles Dave Reyes specializes on utilizing Vanilla Javascript and frameworks such as React and Vue. He is also proficient with other programming languages such as Python, PHP (Laravel), C# (Asp.net), Java and more!' },
+    { question: 'What is testing?', answer: 'Testing is a process of validation and verification of the software focusing on ensuring its overall functionality. Its main objective is to detect possible errors and defects to enhance the user experience of the users.' },
+    { question: 'Why is testing important?', answer: 'Testing is essential to ensure the overall functionality of the software by detecting errors and mitigating defects. The goal of testing is also to guarantee that the software adheres to the objectives and requirements of the software, ultimately delivering a high-quality product that meets user expectations and business needs. ' },
+    { question: 'When is his birthday?', answer: 'May 18, 2002' },
     { question: 'Do have you any experience with Javascript?', answer: 'Yes, Vanilla Javascript and frameworks (React, Vue, Angular).' },
     { question: 'Can you explain what a RESTful API is?', answer: 'A RESTful API is an architectural style for designing networked applications. It uses standard HTTP methods (GET, POST, PUT, DELETE) and provides a way for systems to communicate over the web by using URLs and JSON or XML for data interchange.' },
     { question: 'How do you ensure code quality and maintainability?', answer: 'I ensure code quality by adhering to coding standards, performing code reviews, and writing clean, modular code. I also use tools like linters and formatters to maintain consistency and follow best practices for documentation and testing.' },
@@ -171,10 +218,6 @@ const responses = [
     { question: 'Hello there?' , answer: 'Hi, how can I help you?'},
     { question: 'What are your hobbies?' , answer: 'Charles loves to play badminton and listen to some music on his free time.'},
     { question: 'Do you play any sports?' , answer: 'Charles possesses a keen interest in athletic pursuits, excelling in both badminton and table tennis. Moreover, he engages in casual play of volleyball and chess.'},
-    
-    
-    
-
     
     
 ];

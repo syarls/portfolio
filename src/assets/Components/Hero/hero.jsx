@@ -1,9 +1,9 @@
 import React, { useRef, useEffect } from 'react';
 import './hero.css'
 import Typed from 'typed.js';
-import ayano from '../../images/ayano.jpg'
 import '../../../App.css'
-import { FaDownload } from 'react-icons/fa'; 
+import { FaDownload, FaQuestion, FaQuestionCircle } from 'react-icons/fa'; 
+import { FaClipboardQuestion } from 'react-icons/fa6';
 
 
 
@@ -42,7 +42,7 @@ const hero = () => {
 
   return (
     <div>
-    <div className='xs:flex xs:flex-col md:flex md:flex-col hero-content'>
+    <div className='xs:flex xs:flex-col md:flex md:flex-col md:flex md:flex-col hero-content'>
 
 
         <div className="hero-img">
@@ -52,16 +52,17 @@ const hero = () => {
        <div className="txt-section">
        <h1 className="xs:text-[24px] xs:pt-[0px] xs:text-center hero-txt">
     <span className="xs:hidden hero-txt">Hi, I am </span>
-    <strong className="xs:text-[28px] hero-name">Charles Dave Reyes</strong>
+    <strong className="xs:text-[26px] hero-name">Charles Dave Reyes</strong>
   </h1>
-       <h1 className='txt xs:text-center'><span className='txt xs:hidden'>I am a </span><span className="roles xs:text-[24px]" ref={el}></span></h1>
-       <h3 className='desc xs:pl-[15px] xs:pr-[15px]'>
+       <h1 className='txt xs:text-center'><span className='txt xs:hidden'>I am a </span><span className="roles xs:text-[22px]" ref={el}></span></h1>
+       <h3 className='desc xs:pl-[15px] xs:pr-[15px] xs:text-[18px]'>
       I am a versatile professional based in the Philippines with extensive experience in software engineering and beyond. From designing to solving complex problems, I am adept at delivering impactful solutions within the industry.
        </h3>
      
-        
-       <a href="./src/assets/images/Reyes_Resume.pdf" download="Reyes_Resume" className='xs:mx-auto w-50% resume'>  <FaDownload /> &nbsp; Download CV</a>
-    
+        {/* <div className='flex flex-row gap-[0.6rem] mt-[30px]'> */}
+       <a href="./src/assets/images/Reyes_Resume.pdf" download="Reyes_Resume" className='xs:mx-auto w-50% mt-[30px] resume'>  <FaDownload /> &nbsp; Download CV</a>
+       {/* <a href="./src/assets/images/Reyes_Resume.pdf" download="Reyes_Resume" className='xs:mx-auto w-50% learn'>  <FaQuestionCircle /> &nbsp; Learn More</a>
+       </div> */}
        <div className="bento-container">
   <div className="bento-box dark-black">
     <div className="stat-number">1</div>
@@ -75,6 +76,11 @@ const hero = () => {
     <div className="stat-number">100+</div>
     <div className="stat-description">Seminars Attended</div>
   </div>
+
+ 
+ 
+
+  
   
 </div>
 

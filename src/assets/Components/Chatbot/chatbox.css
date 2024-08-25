@@ -1,5 +1,4 @@
 
-
 .popup{
     position: fixed;
     display: flex;
@@ -9,12 +8,28 @@
     right: 15px;
     width: 100px;
     height: 100px;
-    background: #149BF3;
+    background: linear-gradient(1deg, #4F58FD, #149BF3 99%);
     border-radius: 50%;
     color: black;
+    animation: pulse 3s infinite;
     cursor: pointer;
+  
     
 }
+
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(20, 155, 243, 0.7); 
+    }
+    50% {
+        box-shadow: 0 0 0 1.25rem rgba(79, 88, 253, 0); 
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(20, 155, 243, 0); 
+    }
+}
+
+
 
 
 .chat{
@@ -29,6 +44,8 @@
     bottom: 135px;
     border-top: 70px solid #149BF3;
     display:none;
+    border-radius: 30px;
+    cursor:default;
 }
 
 
@@ -40,14 +57,9 @@
   }
 
 
-  .chat-logo{
 
-    margin-left: 7.5px;
-    border-radius: 10%;
-    margin-top: 5px;
-  }
   .bot-name{
-    margin-left: 7.5px;
+  
     color: white;
     font-size: 20px;
     text-shadow:
@@ -55,34 +67,49 @@
     1px -1px 0 #000,
     -1px 1px 0 #000,
     1px 1px 0 #000;
-    
-
+    display: flex;
+    font-family: "Inter", sans-serif;
+    font-weight:bold;
+   
     
   }
+
+  .bot-col{
+   margin-left: -7.5px;
+   padding-top: 1px;
+    
+  }
+  
   .bot-desc{
-    margin-left: -78px;
-    margin-top: 30px;
-   color: #fff;
+   font-weight:bold;
+    font-family: "Inter", sans-serif;
+    color:	#F0F0F0;
    text-shadow:
    -0.5px -1px 0 #000,  
    1px -1px 0 #000,
    -1px 1px 0 #000,
    1px 1px 0 #000;
+  width: 300px;
+  font-size: 14px;
   
  
 
   }
+
   .bot-close{
-    color:#fff;
+    color:white;
     font-size: 32px;
-    margin-left: 75px;
+    margin-left: -10px;
     margin-top: -5px;
     text-shadow:
     -0.5px -1px 0 #000,  
     1px -1px 0 #000,
     -1px 1px 0 #000,
     1px 1px 0 #000;
-  
+  }
+
+  .bot-close:hover{
+    color:#FF474C;
   }
 
   .chat-header{
@@ -90,7 +117,7 @@
     margin-top: -60px;
   }
   .chat-history{
-    max-height: 340px;
+    max-height: 335px;
     overflow:auto;
   }
 
@@ -138,28 +165,61 @@
   .chat-input{
     display: flex;
     position: absolute;
-    margin-top: 21.32rem;
+    padding-top: 21.32rem;
 
+    z-index: -5;
   }
   .prompt{
-    width: 360px;
+
+    width: 370px;
     height: 40px;
     outline:none;
+    text-indent: 5px;
+    border-top: 1px solid lightgrey;
   }
+  @media (max-width: 425px) {
+    .prompt {
+      width: 280px;
+    }
+
+    .chat{
+      bottom: 110px;
+      right: 15px;
+    }
+
+    
+ 
+  }
+  
   .btn-send{
     font-size: 28px;
     border:none;
     background: #149BF3;
     color:white;
     height: 40px;
+    width: 50px;
+    position: relative; 
+    right: 20px;
+  
   }
 
   .btn-send:hover{
-    background: #0f8cda; /* Slightly darker blue for hover */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow effect */
-  color: #e0f7ff; /* Change text color on hover */
+    background: #66bff2; /* Lighter shade of blue for hover */
+ 
+  color: #f0fcff; /* Lighter text color on hover */
   }
 
   .chat-entry{
     padding-left: 5px;
   }
+
+  /* .question::selection, .answer::selection{
+    background:  #4F58FD;
+  } */
+
+.crl{
+  color:#F0F0F0;
+  background: #149BF3;
+
+}
+

@@ -22,7 +22,7 @@ export default {
       },
       screens: {
       'xs': {'max': '425px'},   
-        'md': {'max': '769px'},  
+        'md': {'max': '767px'},  
         'lg': {'max': '1325px'}, 
       }
     },
